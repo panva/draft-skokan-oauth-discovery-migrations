@@ -10,10 +10,9 @@ consensus: true
 v: 3
 area: ""
 workgroup: "Web Authorization Protocol"
-keyword:
- - next generation
- - unicorn
- - sparkling distributed ledger
+keyword: 
+  - discovery
+  - migrations
 venue:
   group: "Web Authorization Protocol"
   type: ""
@@ -23,20 +22,23 @@ venue:
   latest: "https://panva.github.io/draft-skokan-oauth-discovery-migrations/draft-skokan-oauth-discovery-migrations.html"
 
 author:
- -
+  -
     fullname: "Filip Skokan"
-    organization: Your Organization Here
+    organization: Okta
     email: "panva.ip@gmail.com"
 
 normative:
 
 informative:
 
+entity:
+  SELF: "[draft-skokan-oauth-discovery-migrations-latest]"
 
 --- abstract
 
-TODO Abstract
-
+This document defines a mechanism for OAuth 2.0 Authorization Servers that support RFC8414 (OAuth 2.0
+Authorization Server Metadata) to optionally indicate the availability of new metadata and an opt-in
+mechanism for clients to retrieve and use the updated metadata.
 
 --- middle
 
@@ -57,7 +59,7 @@ TODO Security
 
 # IANA Considerations
 
-This document has no IANA actions.
+TODO This document has no IANA actions (for now).
 
 
 --- back
