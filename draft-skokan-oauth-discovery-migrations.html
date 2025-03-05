@@ -7,9 +7,10 @@
 <title>OAuth 2.0 Authorization Server Metadata Migrations</title>
 <meta content="Filip Skokan" name="author">
 <meta content="
-       This document defines a mechanism for OAuth 2.0 Authorization Servers that support RFC8414 (OAuth 2.0
-Authorization Server Metadata) to optionally indicate the availability of new metadata and an opt-in
-mechanism for clients to retrieve and use the updated metadata. 
+       This document defines a mechanism for OAuth 2.0 Authorization Server Metadata   to
+optionally indicate the availability of updated metadata and a mechanism for an OAuth 2.0 client
+to retrieve and use the updated metadata. The updated metadata can be used for endpoint migration
+purposes or gradual rollout of new authorization server features. 
     " name="description">
 <meta content="xml2rfc 3.28.0" name="generator">
 <meta content="discovery" name="keyword">
@@ -1082,9 +1083,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <h1 id="title">OAuth 2.0 Authorization Server Metadata Migrations</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
-<p id="section-abstract-1">This document defines a mechanism for OAuth 2.0 Authorization Servers that support RFC8414 (OAuth 2.0
-Authorization Server Metadata) to optionally indicate the availability of new metadata and an opt-in
-mechanism for clients to retrieve and use the updated metadata.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-1">This document defines a mechanism for OAuth 2.0 Authorization Server Metadata <span>[<a href="#RFC8414" class="cite xref">RFC8414</a>]</span> to
+optionally indicate the availability of updated metadata and a mechanism for an OAuth 2.0 client
+to retrieve and use the updated metadata. The updated metadata can be used for endpoint migration
+purposes or gradual rollout of new authorization server features.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <section class="note rfcEditorRemove" id="section-note.1">
       <h2 id="name-about-this-document">
@@ -1221,8 +1223,12 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 <span class="refAuthor">Bradner, S.</span>, <span class="refTitle">"Key words for use in RFCs to Indicate Requirement Levels"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 2119</span>, <span class="seriesInfo">DOI 10.17487/RFC2119</span>, <time datetime="1997-03" class="refDate">March 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2119">https://www.rfc-editor.org/rfc/rfc2119</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8174">[RFC8174]</dt>
-    <dd>
+      <dd>
 <span class="refAuthor">Leiba, B.</span>, <span class="refTitle">"Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 8174</span>, <span class="seriesInfo">DOI 10.17487/RFC8174</span>, <time datetime="2017-05" class="refDate">May 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8174">https://www.rfc-editor.org/rfc/rfc8174</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8414">[RFC8414]</dt>
+    <dd>
+<span class="refAuthor">Jones, M.</span>, <span class="refAuthor">Sakimura, N.</span>, and <span class="refAuthor">J. Bradley</span>, <span class="refTitle">"OAuth 2.0 Authorization Server Metadata"</span>, <span class="seriesInfo">RFC 8414</span>, <span class="seriesInfo">DOI 10.17487/RFC8414</span>, <time datetime="2018-06" class="refDate">June 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8414">https://www.rfc-editor.org/rfc/rfc8414</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
 </section>

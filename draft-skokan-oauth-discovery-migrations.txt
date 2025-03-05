@@ -13,10 +13,12 @@ Expires: 6 September 2025
 
 Abstract
 
-   This document defines a mechanism for OAuth 2.0 Authorization Servers
-   that support RFC8414 (OAuth 2.0 Authorization Server Metadata) to
-   optionally indicate the availability of new metadata and an opt-in
-   mechanism for clients to retrieve and use the updated metadata.
+   This document defines a mechanism for OAuth 2.0 Authorization Server
+   Metadata [RFC8414] to optionally indicate the availability of updated
+   metadata and a mechanism for an OAuth 2.0 client to retrieve and use
+   the updated metadata.  The updated metadata can be used for endpoint
+   migration purposes or gradual rollout of new authorization server
+   features.
 
 About This Document
 
@@ -107,6 +109,11 @@ Table of Contents
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
+
+   [RFC8414]  Jones, M., Sakimura, N., and J. Bradley, "OAuth 2.0
+              Authorization Server Metadata", RFC 8414,
+              DOI 10.17487/RFC8414, June 2018,
+              <https://www.rfc-editor.org/rfc/rfc8414>.
 
 Acknowledgments
 
