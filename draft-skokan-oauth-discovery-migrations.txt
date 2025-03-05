@@ -73,9 +73,16 @@ Table of Contents
 
    1.  Introduction
    2.  Conventions and Definitions
-   3.  Security Considerations
-   4.  IANA Considerations
-   5.  Normative References
+   3.  Examples
+     3.1.  Authorization Server Metadata Request & Response with
+           available migrations
+     3.2.  Authorization Server Metadata Request & Response with
+           migrations used (response straight away)
+     3.3.  Authorization Server Metadata Request & Response with
+           migrations used (response through a redirect)
+   4.  Security Considerations
+   5.  IANA Considerations
+   6.  Normative References
    Acknowledgments
    Author's Address
 
@@ -91,15 +98,89 @@ Table of Contents
    BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
    capitals, as shown here.
 
-3.  Security Considerations
+3.  Examples
+
+3.1.  Authorization Server Metadata Request & Response with available
+      migrations
+
+   Metadata Request
+
+   GET /.well-known/oauth-authorization-server HTTP/1.1
+   Host: server.example.com
+
+   Metadata Response
+
+   HTTP/1.1 200 OK
+   Content-Type: application/json
+   Vary: OAuth-Client-ID
+
+   {
+     "issuer": "https://server.example.com",
+     "authorization_endpoint": "https://server.example.com/authorize",
+     "migrations_available": true
+   }
+
+3.2.  Authorization Server Metadata Request & Response with migrations
+      used (response straight away)
+
+   Metadata Request
+
+   GET /.well-known/oauth-authorization-server HTTP/1.1
+   Host: server.example.com
+   OAuth-Client-ID: s6BhdRkqt3
+
+   Metadata Response
+
+   HTTP/1.1 200 OK
+   Content-Type: application/json
+   Vary: OAuth-Client-ID
+
+   {
+     "issuer": "https://server.example.com",
+     "authorization_endpoint": "https://server.example.com/v2/authorize"
+   }
+
+3.3.  Authorization Server Metadata Request & Response with migrations
+      used (response through a redirect)
+
+   Metadata Request
+
+   GET /.well-known/oauth-authorization-server HTTP/1.1
+   Host: server.example.com
+   OAuth-Client-ID: s6BhdRkqt3
+
+   Redirect Response
+
+   HTTP/1.1 307 Temporary Redirect
+   Location: /migrations/s6BhdRkqt3
+   Cache-Control: no-store
+
+   Redirected Metadata Request
+
+   GET /migrations/s6BhdRkqt3 HTTP/1.1
+   Host: server.example.com
+   OAuth-Client-ID: s6BhdRkqt3
+
+   Metadata Response
+
+   HTTP/1.1 200 OK
+   Content-Type: application/json
+   Cache-Control: no-store
+
+   {
+     "issuer": "https://server.example.com",
+     "authorization_endpoint": "https://server.example.com/v2/authorize"
+   }
+
+4.  Security Considerations
 
    TODO Security
 
-4.  IANA Considerations
+5.  IANA Considerations
 
    TODO This document has no IANA actions (for now).
 
-5.  Normative References
+6.  Normative References
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
