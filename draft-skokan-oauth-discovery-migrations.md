@@ -10,7 +10,7 @@ consensus: true
 v: 3
 area: ""
 workgroup: "Web Authorization Protocol"
-keyword: 
+keyword:
   - discovery
   - migrations
 venue:
