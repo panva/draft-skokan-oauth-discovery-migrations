@@ -52,6 +52,77 @@ TODO Introduction
 
 {::boilerplate bcp14-tagged}
 
+# Examples
+
+## Authorization Server Metadata Request & Response with available migrations
+
+Metadata Request
+
+    GET /.well-known/oauth-authorization-server HTTP/1.1
+    Host: server.example.com
+
+Metadata Response
+
+    HTTP/1.1 200 OK
+    Content-Type: application/json
+    Vary: OAuth-Client-ID
+
+    {
+      "issuer": "https://server.example.com",
+      "authorization_endpoint": "https://server.example.com/authorize",
+      "migrations_available": true
+    }
+
+## Authorization Server Metadata Request & Response with migrations used (response straight away)
+
+Metadata Request
+
+    GET /.well-known/oauth-authorization-server HTTP/1.1
+    Host: server.example.com
+    OAuth-Client-ID: s6BhdRkqt3
+
+Metadata Response
+
+    HTTP/1.1 200 OK
+    Content-Type: application/json
+    Vary: OAuth-Client-ID
+
+    {
+      "issuer": "https://server.example.com",
+      "authorization_endpoint": "https://server.example.com/v2/authorize"
+    }
+
+## Authorization Server Metadata Request & Response with migrations used (response through a redirect)
+
+Metadata Request
+
+    GET /.well-known/oauth-authorization-server HTTP/1.1
+    Host: server.example.com
+    OAuth-Client-ID: s6BhdRkqt3
+
+Redirect Response
+
+    HTTP/1.1 307 Temporary Redirect
+    Location: /migrations/s6BhdRkqt3
+    Cache-Control: no-store
+
+Redirected Metadata Request
+
+    GET /migrations/s6BhdRkqt3 HTTP/1.1
+    Host: server.example.com
+    OAuth-Client-ID: s6BhdRkqt3
+
+Metadata Response
+
+    HTTP/1.1 200 OK
+    Content-Type: application/json
+    Cache-Control: no-store
+
+    {
+      "issuer": "https://server.example.com",
+      "authorization_endpoint": "https://server.example.com/v2/authorize"
+    }
+
 
 # Security Considerations
 
