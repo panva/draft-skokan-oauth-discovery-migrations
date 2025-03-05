@@ -4,7 +4,7 @@
 
 Web Authorization Protocol                                     F. Skokan
 Internet-Draft                                                      Okta
-Intended status: Informational                              5 March 2025
+Intended status: Standards Track                            5 March 2025
 Expires: 6 September 2025
 
 
