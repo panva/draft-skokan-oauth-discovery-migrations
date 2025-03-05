@@ -19,11 +19,10 @@
 # Change the file extension to match the format (.xml for XML, etc...)
 #
 ###
-title: "TODO - Your title"
-abbrev: "TODO - Abbreviation"
+title: "OAuth 2.0 Authorization Server Metadata Migrations"
 category: info
 
-docname: draft-todo-yourname-protocol-latest
+docname: draft-skokan-oauth-discovery-migrations-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
 number:
 date:
