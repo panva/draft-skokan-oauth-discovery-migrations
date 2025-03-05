@@ -36,9 +36,10 @@ entity:
 
 --- abstract
 
-This document defines a mechanism for OAuth 2.0 Authorization Servers that support RFC8414 (OAuth 2.0
-Authorization Server Metadata) to optionally indicate the availability of new metadata and an opt-in
-mechanism for clients to retrieve and use the updated metadata.
+This document defines a mechanism for OAuth 2.0 Authorization Server Metadata {{!RFC8414}} to
+optionally indicate the availability of updated metadata and a mechanism for an OAuth 2.0 client
+to retrieve and use the updated metadata. The updated metadata can be used for endpoint migration
+purposes or gradual rollout of new authorization server features.
 
 --- middle
 
