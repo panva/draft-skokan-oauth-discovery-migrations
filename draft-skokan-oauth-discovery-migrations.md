@@ -1,6 +1,6 @@
 ---
 title: "OAuth 2.0 Authorization Server Metadata Migrations"
-category: info
+category: std
 
 docname: draft-skokan-oauth-discovery-migrations-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
